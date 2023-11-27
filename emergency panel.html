@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Response System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color:gainsboro;
+        }
+
+        #map {
+            width: 600px;
+            height: 400px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        #emergencyPanel {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #startButton, #stopButton {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #startButton {
+            background-color: #af4ca3;
+            color: white;
+        }
+
+        #stopButton {
+            background-color: #9536f4;
+            color: white;
+        }
+
+        #log {
+            max-height: 150px;
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Emergency Response System</h1>
+
+    <div id="map"></div>
+
+    <div id="emergencyPanel">
+        <button id="startButton" onclick="startEmergencyResponse()">Start Emergency Response</button>
+        <button id="stopButton" onclick="stopEmergencyResponse()">Stop Emergency Response</button>
+    </div>
+
+    <div id="log"></div>
+
+    <script>
+        function startEmergencyResponse() {
+            logMessage("Emergency response initiated.");
+            // Add your logic for starting the emergency response
+            // You may update the map, log messages, etc.
+        }
+
+        function stopEmergencyResponse() {
+            logMessage("Emergency response stopped.");
+            // Add your logic for stopping the emergency response
+            // You may update the map, log messages, etc.
+        }
+
+        function logMessage(message) {
+            const logElement = document.getElementById('log');
+            const pElement = document.createElement('p');
+            pElement.textContent = message;
+            logElement.appendChild(pElement);
+
+            // Scroll to the bottom to show the latest message
+            logElement.scrollTop = logElement.scrollHeight;
+        }
+    </script>
+    <a href="gui.html">Go to page response panel</a>
+</body>
+</html>

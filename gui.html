@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drones and Robots Control GUI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:azure;
+        }
+
+        header {
+            background-color:gainsboro;
+            color:black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color:gainsboro;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Drones and Robots Control GUI</h1>
+    </header>
+
+    <main>
+        <h2>Response Panel</h2>
+        <p id="status">Idle</p>
+
+        <h2>Actions</h2>
+        <button onclick="takeOff()">Take Off</button>
+        <button onclick="land()">Land</button>
+        <button onclick="deployEmergencyKit()">deploy Emergency Kit</button>
+        <button onclick="performSearchAndRescue()">Search and Rescue</button>
+    </main>
+
+    <script>
+        function updateStatus(newStatus) {
+            document.getElementById('status').innerText = newStatus;
+        }
+
+        function takeOff() {
+            // Simulate sending a command for the drone to take off
+            updateStatus("Taking off...");
+        }
+
+        function land() {
+            // Simulate sending a command for the drone to land
+            updateStatus("Landing...");
+        }
+
+        function deployEmergencyKit() {
+            // Simulate sending a command to deploy a medical kit from the robot
+            updateStatus("Deploying emergency kit...");
+        }
+
+        function performSearchAndRescue() {
+            // Simulate sending a command for the drone or robot to perform search and rescue operations
+            updateStatus("Performing search and rescue...");
+        }
+    </script>
+    <a href="emergency panel.html">Go to page emergency panel</a>
+</body>
+</html>

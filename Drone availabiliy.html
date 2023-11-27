@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Availability Checker</title>
+</head>
+<body>
+    <h1>Drone Availability Checker</h1>
+
+    <button onclick="checkDroneAvailability()">Check Availability</button>
+    <div id="availabilityResult"></div>
+
+    <script>
+        function checkDroneAvailability() {
+            // You would typically make an API request here to get real-time drone availability
+            // For simplicity, let's assume a boolean result for availability
+            const isAvailable = Math.random() < 0.5; // Example: 50% chance of availability
+
+            const resultElement = document.getElementById('availabilityResult');
+
+            if (isAvailable) {
+                resultElement.textContent = ' Drones are available  nearby! ';
+            } else {
+                resultElement.textContent='Sorry,no Drones are available at the moment';
+            }
+        }
+    </script>
+    <a href="Drone connection.html">Go to connection page</a>
+</body>
+</html>
